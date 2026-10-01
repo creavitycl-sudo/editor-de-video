@@ -1,0 +1,7 @@
+{
+  "vocabulario": ["Claude Code", "Remotion", "Whisper", "FFmpeg", "GitHub"],
+  "correcciones": {
+    "Cloud Code": "Claude Code",
+    "SuperBase": "Supabase"
+  }
+}

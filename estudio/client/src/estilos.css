@@ -1,0 +1,77 @@
+:root {
+  --fondo: #050708;
+  --texto: #eaf6f7;
+  --acento: #2fd8e0;
+  --cta: #d97757;
+  --panel: #0f1416;
+  --borde: #1e2a2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: -apple-system, "Segoe UI", Manrope, sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  background: var(--panel);
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.boton-primario {
+  background: var(--acento);
+  color: #06181a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+.boton-primario:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.tarjeta {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.etiqueta {
+  display: block;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}

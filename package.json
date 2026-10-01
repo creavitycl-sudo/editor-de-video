@@ -1,28 +1,55 @@
 {
-  "name": "remotion-scaffold",
+  "name": "editor-de-video",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Editor automatico de reels con Remotion y Claude Code",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@remotion/bundler": "4.0.531",
     "@remotion/cli": "4.0.531",
+    "@remotion/google-fonts": "4.0.531",
+    "@remotion/install-whisper-cpp": "4.0.531",
+    "@remotion/media": "4.0.531",
+    "@remotion/media-utils": "4.0.531",
+    "@remotion/noise": "4.0.531",
+    "@remotion/renderer": "4.0.531",
+    "@remotion/transitions": "4.0.531",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "marked": "^15.0.6",
+    "multer": "^1.4.5-lts.1",
+    "playwright-core": "^1.49.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.531"
+    "remotion": "4.0.531",
+    "sharp": "0.33.5",
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.531",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.10.2",
     "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.2",
     "@types/web": "0.0.166",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
     "eslint": "9.39.5",
     "prettier": "3.8.1",
-    "typescript": "5.9.3"
+    "tsx": "^4.19.2",
+    "typescript": "5.9.3",
+    "vite": "^6.0.7"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "estudio": "concurrently -k -n server,cliente \"tsx watch estudio/server/index.ts\" \"vite --config estudio/client/vite.config.ts\"",
+    "estudio:build": "vite build --config estudio/client/vite.config.ts",
+    "estudio:servidor": "node --import tsx estudio/server/index.ts"
   }
 }

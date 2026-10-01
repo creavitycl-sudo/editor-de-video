@@ -1,0 +1,5 @@
+{
+  "modeloWhisper": "medium",
+  "idioma": "es",
+  "whisperCppVersion": "1.5.5"
+}

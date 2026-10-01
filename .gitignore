@@ -5,3 +5,20 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Whisper.cpp se compila e instala localmente; su modelo pesa ~1.5GB.
+whisper.cpp/
+
+# Grabaciones, audio normalizado, capturas de pantalla y renders: pesados,
+# no van al repo. Conserva src/brand/*, src/components/* y los scripts.
+public/assets/
+public/captions-*.json
+public/contactos/
+public/renders/
+public/test-frame.png
+
+# Reels del estudio: datos locales del usuario, no del proyecto en si.
+data/reels/
+
+# Build del cliente del estudio.
+estudio/client/dist/
